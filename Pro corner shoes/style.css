@@ -1,0 +1,195 @@
+
+
+
+
+body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: linear-gradient(to bottom,#000000,#28292a);
+    }
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      
+
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    nav ul li a.active {
+      color: #ff5722;
+    }
+    
+    h1,
+    h2 {
+      color: #d3cdcd;
+    }
+    p {
+      color: #bbb;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #000000;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    header {
+      margin-bottom: 30px;
+    }
+    header .miday {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    header .miday a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      transition: color 0.3s;
+    } 
+    header .miday a:hover {
+      color: #ff9800;
+    }
+    header .miday a.facebook:hover {
+      color: #3b5998;
+    }
+    
+    header .miday a.twitter:hover {
+      color: #1da1f2;
+    }
+    header .miday a.instagram:hover {
+      color: #e1306c;
+    }
+    header .miday a.linkedin:hover {
+      color: #0077b5;
+    }
+    
+    
+    img {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      transition: transform 0.2s;
+    }
+    img:hover {
+      transform: scale(1.05);
+      border-color: #777;
+    }
+    figcaption {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    figure {
+      margin: 10px;
+      text-align: center;
+    }
+    figure img {
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+    }
+    .wh-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      transition: transform 0.15s;
+    }
+    .wh-float:hover {
+      transform: translateY(-4px);
+    }
+    .wh-float svg {
+      display: block;
+    }
+    @media (max-width: 420px) {
+      .wh-float {
+        right: 14px;
+        bottom: 14px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+    
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+    div .jordan, .nike, .adidas, .puma {
+      margin: 15px;
+      border: 2px solid #444;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 220px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    a {
+      text-decoration: none;
+    }
+    figcaption {
+      font-size: large;
+      color: #fffefe;
+    }
+    .miday{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #787575;
+    }
+
+    body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(2,6,23,0.55), rgba(2,6,23,0.65)),
+    url("img/home img/jordan_black_cat.jpg");
+  background-size:cover;
+  background-position:center center;
+  z-index:-1;
+  filter:contrast(1.02) saturate(0.9) blur(0.2px);
+}
+      
+  
