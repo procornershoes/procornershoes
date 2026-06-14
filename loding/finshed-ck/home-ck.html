@@ -1,60 +1,167 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>calvin klein</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-  <body>
-    <h1>calvin klein</h1>
-    <div>
-      <a href="color-ck/white.html"
-        ><img src="img-ck/white1.jpeg" alt="kelvin klein"
-      /></a>
-    </div>
-     
-    
-</footer>
-<footer>
+    <title>Pro Corner Shoes | Jordan 5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-red: #e63946;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f4f4f4;
+            --white: #ffffff;
+        }
 
-    <div class="footer-container">
-        <p>&copy; 2024 Pro Corner Shoes.</p>
-        <div class="social-icons">
-            <span>Follow us:</span>
-            <a href="https://www.facebook.com/share/1HHQRw5nw9/" target="_blank" rel="noopener noreferrer" title="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.tiktok.com/@pro.corner.shoes?_r=1&_t=ZS-94wEmjI6U5A" target="_blank" rel="noopener noreferrer" title="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://wa.me/201026316482" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-    </div>
+        body {
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: #333;
+        }
+
+        header {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 20px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 1px;
+            font-size: 1.8rem;
+        }
+
+        header span { color: var(--main-red); }
+
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .shoe-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .shoe-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .shoe-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .shoe-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .shoe-info {
+            padding: 15px;
+        }
+
+        .shoe-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--dark-bg);
+        }
+
+        .wh-float, .whatsapp-float-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: all 0.3s;
+        }
+
+        .wh-float:hover, .whatsapp-float-btn:hover {
+            transform: scale(1.1);
+            background: #128c7e;
+        }
+
+        .wh-float svg, .whatsapp-float-btn svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.4rem; }
+            .container { grid-template-columns: 1fr; padding: 15px; }
+            .wh-float, .whatsapp-float-btn { width: 50px; height: 50px; right: 15px; bottom: 15px; }
+        }
     
-</footer>
-</body>
-  <style>
-    body {
-      text-align: center;
-      background-image: url(img-home-jordan5.jpeg);
-      background-size: auto;
-      background-position: center;
+.whatsapp-float-btn {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+.whatsapp-float-btn:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .whatsapp-float-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        left: 20px;
     }
-    img {
-      width: 300px;
-      height: auto;
-      margin: 50px;
-      border: 2px solid #ccc;
-      border-radius: 40px;
-      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    .whatsapp-float-btn svg {
+        width: 24px !important;
+        height: 24px !important;
     }
-    h1 {
-      color: black;
-    }
-  
+}
+
+
 footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -114,4 +221,44 @@ footer {
     background-color: #25D366;
 }
 </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>PRO CORNER <span>SHOES</span></h1>
+        <p>calvin klein</p>
+        <p>اتصل بنا: <a href="https://wa.me/201093311332" style="color: var(--main-red); text-decoration: none;">01093311332</a></p>
+    </header>
+
+    <div class="container">
+        <a href="color-ck/white.html" class="shoe-card"><img src="img-ck/white1.jpeg" alt="ck" /><div class="shoe-info"><h3>Beige</h3></div></a>
+    </div>
+
+    <a href="https://wa.me/201093311332" class="whatsapp-float-btn" target="_blank" rel="noopener"><svg viewBox="0 0 448 512" style="width: 28px; height: 28px; fill: white;">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.２-98.２ 0-10１.７ 8２．８-１８４．５ １８４．６-１８４．５ 4９．３ 0 ９５．６ １９．２ １３０．４ ５４．１ ３４．８ ３４．９ ５６．２ ８１．２ ５６．１ １３０．５ 0 １０１．８-８４．９ １８４．６-１８６．６ １８４．６zm１０１．２-１３８．２c-５．５-２．８-３２．８-１６．２-３７．９-１８－５．１－１．９－８．８－２．８－１２．５ －２＋３＋５＋６－７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９＋７＋９_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_ PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS_PLUS-plus-plus-plus-plus-plus-plus-plus-plus-plus-plus-plus-plus-plus-plus-plus-plus-plus-minus-minus-minus-minus-minus-minus-minus-minus-minus-minus-minus_minus_minus_minus_minus_minus_minus_minus_minus_minus_minus_minus_MINUS_MINUS_MINUS_MINUS_MINUS_MINUS_MINUS_MINUS_MINUS_MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS-MINUS_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN_US_MN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-MIN-US_-_
+
+   
+    
+</footer>
+<footer>
+
+    <div class="footer-container">
+        <p>&copy; 2024 Pro Corner Shoes.</p>
+        <div class="social-icons">
+            <span>Follow us:</span>
+            <a href="https://www.facebook.com/share/1HHQRw5nw9/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@pro.corner.shoes?_r=1&_t=ZS-94wEmjI6U5A" target="_blank" rel="noopener noreferrer" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/201026316482" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    
+</footer>
+</body>
 </html>
