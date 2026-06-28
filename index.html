@@ -7,100 +7,8 @@
     <link rel="stylesheet" href="style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<style>
-.whatsapp-float-btn {
-    position: fixed;
-    bottom: 40px;
-    left: 40px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-.whatsapp-float-btn:hover {
-    background-color: #128C7E;
-    transform: scale(1.1);
-}
-@media (max-width: 768px) {
-    .whatsapp-float-btn {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        left: 20px;
-    }
-    .whatsapp-float-btn svg {
-        width: 24px !important;
-        height: 24px !important;
-    }
-}
 
-footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.social-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* المسافة بين الأيقونات */
-}
-
-.social-icons span {
-    font-size: 14px;
-    color: #ccc;
-}
-
-.social-icons a {
-    color: #fff;
-    font-size: 20px; /* حجم الأيقونات */
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* جعل الخلفية دائرية عند الـ hover */
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* ألوان البراند عند مرور الماوس */
-.social-icons a:hover {
-    transform: translateY(-3px); 
-}
-
-.social-icons a[title="Facebook"]{
-    background-color: #1877F2;
-}
-
-.social-icons a[title="TikTok"]{
-    background-color: #000000;
-    box-shadow: 2px 2px 5px #ff0050, -2px -2px 5px #00f2ea; 
-}
-
-.social-icons a[title="WhatsApp"]{
-    background-color: #25D366;
-}
-</style>
 </head>
 <body>
 
@@ -675,56 +583,70 @@ footer {
     </div>
     
 </footer>
+
 <script>
 const products = document.querySelectorAll(".product-card");
 const pagination = document.getElementById("pagination");
 
-const itemsPerPage = 12;
+const itemsPerPage = 12; // عدد المنتجات في كل صفحة
 let currentPage = 1;
 
-function showPage(page){
+const totalPages = Math.ceil(products.length / itemsPerPage);
+
+function showPage(page, scroll = true) {
 
     currentPage = page;
 
-    products.forEach((product,index)=>{
-
-        if(index >= (page-1)*itemsPerPage &&
-           index < page*itemsPerPage){
-
-            product.style.display="block";
-
-        }else{
-
-            product.style.display="none";
-
+    products.forEach((product, index) => {
+        if (
+            index >= (page - 1) * itemsPerPage &&
+            index < page * itemsPerPage
+        ) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
         }
-
     });
 
-    document.querySelectorAll(".pagination button")
-    .forEach(btn=>btn.classList.remove("active"));
+    renderPagination();
 
-    document.getElementById("page"+page).classList.add("active");
-
+    // ينزل لقسم المنتجات فقط عند الضغط على التالي أو السابق
+    if (scroll) {
+        document.getElementById("shop").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
 }
 
-const totalPages = Math.ceil(products.length/itemsPerPage);
+function renderPagination() {
 
-for(let i=1;i<=totalPages;i++){
+    pagination.innerHTML = "";
 
-    const btn=document.createElement("button");
+    // زر السابق
+    const prev = document.createElement("button");
+    prev.innerHTML = "◀ السابق";
+    prev.disabled = currentPage === 1;
+    prev.onclick = () => showPage(currentPage - 1);
+    pagination.appendChild(prev);
 
-    btn.innerText=i;
+    // رقم الصفحة
+    const pageInfo = document.createElement("span");
+    pageInfo.className = "page-info";
+    pageInfo.innerHTML = currentPage + " / " + totalPages;
+    pagination.appendChild(pageInfo);
 
-    btn.id="page"+i;
-
-    btn.onclick=()=>showPage(i);
-
-    pagination.appendChild(btn);
-
+    // زر التالي
+    const next = document.createElement("button");
+    next.innerHTML = "التالي ▶";
+    next.disabled = currentPage === totalPages;
+    next.onclick = () => showPage(currentPage + 1);
+    pagination.appendChild(next);
 }
 
-showPage(1);
+// أول مرة يفتح الموقع
+showPage(1, false);
 </script>
+
 </body>
 </html>
