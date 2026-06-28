@@ -553,7 +553,10 @@
             </div>
 
         </div>
-        <div id="pagination" class="pagination"></div>
+       
+        <div class="load-more-container">
+    <button id="loadMoreBtn" class="load-more-btn">عرض المزيد</button>
+</div>
 
     </section>
 
@@ -586,66 +589,33 @@
 
 <script>
 const products = document.querySelectorAll(".product-card");
-const pagination = document.getElementById("pagination");
+const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-const itemsPerPage = 12; // عدد المنتجات في كل صفحة
-let currentPage = 1;
+let currentItems = 12;
 
-const totalPages = Math.ceil(products.length / itemsPerPage);
-
-function showPage(page, scroll = true) {
-
-    currentPage = page;
-
-    products.forEach((product, index) => {
-        if (
-            index >= (page - 1) * itemsPerPage &&
-            index < page * itemsPerPage
-        ) {
-            product.style.display = "";
-        } else {
-            product.style.display = "none";
-        }
-    });
-
-    renderPagination();
-
-    // ينزل لقسم المنتجات فقط عند الضغط على التالي أو السابق
-    if (scroll) {
-        document.getElementById("shop").scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+// إخفاء كل المنتجات بعد أول 12
+products.forEach((item, index) => {
+    if(index >= currentItems){
+        item.style.display = "none";
     }
-}
+});
 
-function renderPagination() {
+loadMoreBtn.addEventListener("click", () => {
 
-    pagination.innerHTML = "";
+    let nextItems = currentItems + 12;
 
-    // زر السابق
-    const prev = document.createElement("button");
-    prev.innerHTML = "◀ السابق";
-    prev.disabled = currentPage === 1;
-    prev.onclick = () => showPage(currentPage - 1);
-    pagination.appendChild(prev);
+    for(let i = currentItems; i < nextItems && i < products.length; i++){
+        products[i].style.display = "";
+    }
 
-    // رقم الصفحة
-    const pageInfo = document.createElement("span");
-    pageInfo.className = "page-info";
-    pageInfo.innerHTML = currentPage + " / " + totalPages;
-    pagination.appendChild(pageInfo);
+    currentItems = nextItems;
 
-    // زر التالي
-    const next = document.createElement("button");
-    next.innerHTML = "التالي ▶";
-    next.disabled = currentPage === totalPages;
-    next.onclick = () => showPage(currentPage + 1);
-    pagination.appendChild(next);
-}
+    // إخفاء الزر لما تظهر كل المنتجات
+    if(currentItems >= products.length){
+        loadMoreBtn.style.display = "none";
+    }
 
-// أول مرة يفتح الموقع
-showPage(1, false);
+});
 </script>
 
 </body>
