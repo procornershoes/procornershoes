@@ -645,6 +645,7 @@ footer {
             </div>
 
         </div>
+        <div id="pagination" class="pagination"></div>
 
     </section>
 
@@ -674,5 +675,56 @@ footer {
     </div>
     
 </footer>
+<script>
+const products = document.querySelectorAll(".product-card");
+const pagination = document.getElementById("pagination");
+
+const itemsPerPage = 12;
+let currentPage = 1;
+
+function showPage(page){
+
+    currentPage = page;
+
+    products.forEach((product,index)=>{
+
+        if(index >= (page-1)*itemsPerPage &&
+           index < page*itemsPerPage){
+
+            product.style.display="block";
+
+        }else{
+
+            product.style.display="none";
+
+        }
+
+    });
+
+    document.querySelectorAll(".pagination button")
+    .forEach(btn=>btn.classList.remove("active"));
+
+    document.getElementById("page"+page).classList.add("active");
+
+}
+
+const totalPages = Math.ceil(products.length/itemsPerPage);
+
+for(let i=1;i<=totalPages;i++){
+
+    const btn=document.createElement("button");
+
+    btn.innerText=i;
+
+    btn.id="page"+i;
+
+    btn.onclick=()=>showPage(i);
+
+    pagination.appendChild(btn);
+
+}
+
+showPage(1);
+</script>
 </body>
 </html>
