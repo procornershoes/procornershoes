@@ -171,8 +171,78 @@ nav {
   font-size: 0.9rem;
 }
 
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.load-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 240px;
+  height: 55px;
+
+  background: #0066ff;
+  color: #fff;
+
+  border: none;
+  border-radius: 50px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 102, 255, 0.25);
+}
+
+.load-more-btn i {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background: #0052cc;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 102, 255, 0.35);
+}
+
+.load-more-btn:hover i {
+  transform: translateY(3px);
+}
+
+.load-more-btn:active {
+  transform: scale(0.97);
+}
+
+/* الموبايل */
+@media (max-width: 768px) {
+  .load-more-container {
+    margin: 35px 0;
+  }
+
+  .load-more-btn {
+    width: 90%;
+    max-width: 280px;
+    height: 52px;
+
+    font-size: 15px;
+
+    background: #0066ff;
+    color: #fff;
+
+    border-radius: 40px;
+  }
+}
+
 .logo {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   color: #ff4757;
 }
@@ -233,7 +303,7 @@ nav a img {
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
@@ -253,6 +323,7 @@ nav a img {
 
 /* قسم المنتجات (Products) */
 .products {
+  padding: 50px 10%;
   text-align: center;
 }
 
