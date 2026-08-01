@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background-color: #000;
+  background-color: #fff;
   color: #fff;
   padding: 10px 10%;
   display: flex;
@@ -320,19 +320,19 @@ nav {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   color: #ff4757;
 }
 span.white {
-  color: #f4f4f4;
+  color: blue;
 }
 span.blue {
   color: blue;
 }
 
 nav a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   margin-right: 20px;
   transition: 0.3s;
@@ -363,7 +363,7 @@ nav a img {
 .hero {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("haed-home2.png");
+    url("tierra-banner.webp");
   background-size: cover;
   background-position: center;
   height: 50vh;
