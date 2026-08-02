@@ -322,13 +322,25 @@ nav {
 .logo {
   font-size: 30px;
   font-weight: bold;
-  color: #ff4757;
+  color: #000000;
 }
 span.white {
-  color: blue;
+  color: #000000;
 }
 span.blue {
-  color: blue;
+  color: #000000;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  margin: 8px auto 0;
+  background: linear-gradient(90deg, #000000, #ffffff, #000000);
+  box-shadow:
+    0 0 8px #ffffff,
+    0 0 8px #ffffff;
 }
 
 nav a {
