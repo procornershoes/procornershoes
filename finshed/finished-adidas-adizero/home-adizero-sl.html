@@ -1,62 +1,133 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adidas adizero sl</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <h1>adidas adizero sl</h1>
-    <div>
-        <a href="color-adizero-sl/black.html"><img src="img-adidas-adizero-sl/black1.jpeg"></a>
-        <a href="color-adizero-sl/blue.html"><img src="img-adidas-adizero-sl/blue1.jpeg"></a>
-    </div>
-    
-   
-    
-</footer>
-<footer>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Corner Shoes | Adidas Adizero </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-red: #e63946;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f4f4f4;
+            --white: #ffffff;
+        }
 
-    <div class="footer-container">
-        <p>&copy; 2024 Pro Corner Shoes.</p>
-        <div class="social-icons">
-            <span>Follow us:</span>
-            <a href="https://www.facebook.com/share/1HHQRw5nw9/" target="_blank" rel="noopener noreferrer" title="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.tiktok.com/@pro.corner.shoes?_r=1&_t=ZS-94wEmjI6U5A" target="_blank" rel="noopener noreferrer" title="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://wa.me/201026316482" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-    </div>
+        body {
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: #333;
+        }
+
+        header {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 20px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 1px;
+            font-size: 1.8rem;
+        }
+
+        header span { color: var(--main-red); }
+
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .shoe-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .shoe-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .shoe-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .shoe-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .shoe-info {
+            padding: 15px;
+        }
+
+        .shoe-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--dark-bg);
+        }
+
+        .wh-float, .whatsapp-float-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: all 0.3s;
+        }
+
+        .wh-float:hover, .whatsapp-float-btn:hover {
+            transform: scale(1.1);
+            background: #128c7e;
+        }
+
+        .wh-float svg, .whatsapp-float-btn svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.4rem; }
+            .container { grid-template-columns: 1fr; padding: 15px; }
+            .wh-float, .whatsapp-float-btn { width: 50px; height: 50px; right: 15px; bottom: 15px; }
+        }
     
-</footer>
-</body>
-<style>
-    body {
-        text-align: center;
-        background-image: url(lacoste.jpg);
-        background-size: cover;
-        background-position: center;
-        
-    }
-    img {
-        width: 300px;
-        height: auto;
-        margin: 50px;
-        border: 2px solid #ccc;
-        border-radius: 40px;
-        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-        color: white;
-    }
-
-
 footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -116,4 +187,71 @@ footer {
     background-color: #25D366;
 }
 </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>PRO CORNER <span>SHOES</span></h1>
+        <p>Adidas Adizero </p>
+        <p>اتصل بنا: <a href="https://wa.me/201093311332" style="color: var(--main-red); text-decoration: none;">01093311332</a></p>
+    </header>
+
+    
+ <div class="container">
+       
+        <a href="color-adizero-sl/black.html" class="shoe-card">
+            <img src="img-adidas-adizero-sl/black1.jpeg" alt="Adidas Adizero SL Black" />
+            <div class="shoe-info">
+                <h3>Adidas Adizero SL - Black</h3>
+            </div>
+        </a>
+        <a href="color-adizero-sl/blue.html" class="shoe-card">
+            <img src="img-adidas-adizero-sl/blue1.jpeg" alt="Adidas Adizero SL Blue" />
+            <div class="shoe-info">
+                <h3>Adidas Adizero SL - Blue</h3>
+            </div>
+        </a>
+        <a href="color-adizero-sl/grey-red-adios-PRO4.html" class="shoe-card">
+            <img src="img-adidas-adizero-sl/grey-red-adios-PRO4-1.jpeg" alt="Adidas Adizero adios" />
+            <div class="shoe-info">
+                <h3>Adidas Adizero adios PRO4</h3>
+            </div>
+        </a>
+        <a href="color-adizero-sl/black-white-adios-PRO4.html" class="shoe-card">
+            <img src="img-adidas-adizero-sl/black-white-adios-PRO4-1.jpeg" alt="Adidas Adizero adios PRO4" />
+            <div class="shoe-info">
+                <h3>Adidas Adizero Adios PRO4</h3>
+            </div>
+        </a>
+        <a href="color-adizero-sl/grey-red-evo-sl.html" class="shoe-card">
+            <img src="img-adidas-adizero-sl/grey-red-evo-sl-1.jpeg" alt="Adidas Adizero Evo SL" />
+            <div class="shoe-info">
+                <h3>Adidas Adizero Evo SL</h3>
+            </div>
+        </a>
+        
+        
+    </div>
+</footer>
+<footer>
+
+    <div class="footer-container">
+        <p>&copy; 2024 Pro Corner Shoes.</p>
+        <div class="social-icons">
+            <span>Follow us:</span>
+            <a href="https://www.facebook.com/share/1HHQRw5nw9/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@pro.corner.shoes?_r=1&_t=ZS-94wEmjI6U5A" target="_blank" rel="noopener noreferrer" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/201026316482" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    
+</footer>
+</body>
 </html>
+
