@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pro Corner Shoes | Jordan 4 Collection</title>
+    <title>Pro Corner Shoes | Jordan 4 - Light Green</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -22,6 +22,7 @@
             color: #333;
         }
 
+        /* الهيدر */
         header {
             background: var(--dark-bg);
             color: var(--white);
@@ -45,54 +46,38 @@
             opacity: 0.9;
         }
 
+        /* حاوية الصور (Grid) */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        .shoe-card {
+        .shoe-image {
             background: var(--white);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
             border: 1px solid #eee;
         }
 
-        .shoe-card:hover {
+        .shoe-image:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
-        .shoe-card img {
+        .shoe-image img {
             width: 100%;
             height: auto;
             display: block;
             transition: 0.5s;
         }
 
-        .shoe-card:hover img {
-            transform: scale(1.05);
-        }
-
-        .shoe-info {
-            padding: 15px;
-            background: var(--white);
-        }
-
-        .shoe-info h3 {
-            margin: 0;
-            font-size: 1.1rem;
-            color: var(--dark-bg);
-        }
-
+        /* زر الواتساب العائم */
         .wh-float, .whatsapp-float-btn {
             position: fixed;
             right: 20px;
@@ -121,6 +106,7 @@
             fill: white;
         }
 
+        /* للموبايل */
         @media (max-width: 480px) {
             header h1 { font-size: 1.4rem; }
             .container { grid-template-columns: 1fr; padding: 15px; }
@@ -227,131 +213,23 @@ footer {
 
     <header>
         <h1>PRO CORNER <span>SHOES</span></h1>
-        <p>All Colors - Jordan 4 Collection</p>
+        <p>Jordan 4 - Light Green</p>
         <p>اتصل بنا: <a href="https://wa.me/201093311332" style="color: var(--main-red); text-decoration: none;">01093311332</a></p>
     </header>
 
     <div class="container">
-         <a href="new-color-jordan-4/light-green.html" class="shoe-card">
-            <img src="img_jordan_4/light-green1.jpeg" alt="Jordan 4 Light Green" />
-            <div class="shoe-info"><h3>Jordan 4 - Light Green</h3></div>
-        </a>
+        <div class="shoe-image">
+            <img src="../img_jordan_4/light-green1.jpeg" alt="Jordan 4 - Red Oreo" />
+        </div>
 
+        <div class="shoe-image">
+            <img src="../img_jordan_4/light-green2.jpeg" alt="Jordan 4 - Red Oreo" />
+        </div>
 
-        <a href="color-jordan-4/black-cat.html" class="shoe-card">
-            <img src="img_jordan_4/black_cat1.jpeg" alt="Jordan 4 Black Cat" />
-            <div class="shoe-info"><h3>Jordan 4 - Black Cat</h3></div>
-        </a>
+        <div class="shoe-image">
+            <img src="../img_jordan_4/light-green3.jpeg" alt="Jordan 4 - Red Oreo" />
+        </div>
 
-          <a href="new-color-jordan-4/red-oreo.html" class="shoe-card">
-            <img src="img_jordan_4/red-oreo1.jpeg" alt="Jordan 4 Red Oreo" />
-            <div class="shoe-info"><h3>Jordan 4 - Red Oreo</h3></div>
-        </a>
-
-         <a href="new-color-jordan-4/white-thunder.html" class="shoe-card">
-            <img src="img_jordan_4/white-thunder1.jpeg" alt="Jordan 4 White Thunder" />
-            <div class="shoe-info"><h3>Jordan 4 - White Thunder</h3></div>
-        </a>
-
-         <a href="new-color-jordan-4/white-oreo.html" class="shoe-card">
-            <img src="img_jordan_4/white-oreo1.jpeg" alt="Jordan 4 White Oreo" />
-            <div class="shoe-info"><h3>Jordan 4 - White Oreo</h3></div>
-        </a>
-        
-        <a href="color-jordan-4/700-grey-orange.html" class="shoe-card">
-            <img src="img_jordan_4/700-grey-orange1.jpeg" alt="Jordan 4 Grey Orange" />
-            <div class="shoe-info"><h3>Jordan 4 - Grey Orange</h3></div>
-        </a>
-
-        <a href="color-jordan-4/700-off-white.html" class="shoe-card">
-            <img src="img_jordan_4/700-off-white1.jpeg" alt="Jordan 4 Off White" />
-            <div class="shoe-info"><h3>Jordan 4 - Off White</h3></div>
-        </a>
-
-        <a href="color-jordan-4/700-white-black-red.html" class="shoe-card">
-            <img src="img_jordan_4/700-white-black-red1.jpeg" alt="Jordan 4 White Black Red" />
-            <div class="shoe-info"><h3>Jordan 4 - White Black Red</h3></div>
-        </a>
-
-        <a href="color-jordan-4/700-white-purple.html" class="shoe-card">
-            <img src="img_jordan_4/700-white-purple1.jpeg" alt="Jordan 4 White Purple" />
-            <div class="shoe-info"><h3>Jordan 4 - White Purple</h3></div>
-        </a>
-
-        <a href="color-jordan-4/700-white-red.html" class="shoe-card">
-            <img src="img_jordan_4/700-white-red1.jpeg" alt="Jordan 4 White Red" />
-            <div class="shoe-info"><h3>Jordan 4 - White Red</h3></div>
-        </a>
-
-        <a href="color-jordan-4/black-grey-red.html" class="shoe-card">
-            <img src="img_jordan_4/black-grey-red1.jpeg" alt="Jordan 4 Black Grey Red" />
-            <div class="shoe-info"><h3>Jordan 4 - Black Grey Red</h3></div>
-        </a>
-
-        <a href="color-jordan-4/blue-thunder.html" class="shoe-card">
-            <img src="img_jordan_4/blue_thunder1.jpeg" alt="Jordan 4 Blue Thunder" />
-            <div class="shoe-info"><h3>Jordan 4 - Blue Thunder</h3></div>
-        </a>
-
-        <a href="color-jordan-4/green-glow.html" class="shoe-card">
-            <img src="img_jordan_4/green_glow1.jpeg" alt="Jordan 4 Green Glow" />
-            <div class="shoe-info"><h3>Jordan 4 - Green Glow</h3></div>
-        </a>
-
-        <a href="color-jordan-4/grey-black.html" class="shoe-card">
-            <img src="img_jordan_4/grey-black1.jpeg" alt="Jordan 4 Grey Black" />
-            <div class="shoe-info"><h3>Jordan 4 - Grey Black</h3></div>
-        </a>
-
-        <a href="color-jordan-4/grey.html" class="shoe-card">
-            <img src="img_jordan_4/grey1.jpeg" alt="Jordan 4 Grey" />
-            <div class="shoe-info"><h3>Jordan 4 - Grey</h3></div>
-        </a>
-
-        <a href="color-jordan-4/off-white-green.html" class="shoe-card">
-            <img src="img_jordan_4/off-white-green1.jpeg" alt="Jordan 4 Off White Green" />
-            <div class="shoe-info"><h3>Jordan 4 - Off White Green</h3></div>
-        </a>
-
-        <a href="color-jordan-4/off-white.html" class="shoe-card">
-            <img src="img_jordan_4/off-white1.jpeg" alt="Jordan 4 Off White" />
-            <div class="shoe-info"><h3>Jordan 4 - Off White</h3></div>
-        </a>
-
-        <a href="color-jordan-4/old.html" class="shoe-card">
-            <img src="img_jordan_4/old1.jpeg" alt="Jordan 4 Old" />
-            <div class="shoe-info"><h3>Jordan 4 - Old</h3></div>
-        </a>
-
-        <a href="color-jordan-4/red-thunder.html" class="shoe-card">
-            <img src="img_jordan_4/red_thunder1.jpeg" alt="Jordan 4 Red Thunder" />
-            <div class="shoe-info"><h3>Jordan 4 - Red Thunder</h3></div>
-        </a>
-
-        <a href="color-jordan-4/travis-scott.html" class="shoe-card">
-            <img src="img_jordan_4/travis_scott1.jpeg" alt="Jordan 4 Travis Scott" />
-            <div class="shoe-info"><h3>Jordan 4 - Travis Scott</h3></div>
-        </a>
-
-        <a href="color-jordan-4/white-green.html" class="shoe-card">
-            <img src="img_jordan_4/white-green1.jpeg" alt="Jordan 4 White Green" />
-            <div class="shoe-info"><h3>Jordan 4 - White Green</h3></div>
-        </a>
-
-        <a href="color-jordan-4/white-ovile-green.html" class="shoe-card">
-            <img src="img_jordan_4/white-ovile-green1.jpeg" alt="Jordan 4 White Olive Green" />
-            <div class="shoe-info"><h3>Jordan 4 - White Olive Green</h3></div>
-        </a>
-
-        <a href="color-jordan-4/white-silver.html" class="shoe-card">
-            <img src="img_jordan_4/white-silver1.jpeg" alt="Jordan 4 White Silver" />
-            <div class="shoe-info"><h3>Jordan 4 - White Silver</h3></div>
-        </a>
-
-        <a href="color-jordan-4/yellow-thunder.html" class="shoe-card">
-            <img src="img_jordan_4/yellow_thunder1.jpeg" alt="Jordan 4 Yellow Thunder" />
-            <div class="shoe-info"><h3>Jordan 4 - Yellow Thunder</h3></div>
-        </a>
     </div>
 
     <a href="https://wa.me/201093311332" class="whatsapp-float-btn" target="_blank" rel="noopener"><svg viewBox="0 0 448 512" style="width: 28px; height: 28px; fill: white;">
