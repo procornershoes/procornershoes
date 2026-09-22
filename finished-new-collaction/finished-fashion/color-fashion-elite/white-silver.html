@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pro Corner Shoes | Fashion Collection</title>
+    <title>Pro Corner Shoes | Fashion Elite - White/Silver</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -40,6 +40,12 @@
 
         header span { color: var(--main-red); }
 
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
         /* حاوية الصور (Grid) */
         .container {
             max-width: 1200px;
@@ -50,39 +56,25 @@
             gap: 20px;
         }
 
-        .shoe-card {
+        .shoe-image {
             background: var(--white);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
             border: 1px solid #eee;
         }
 
-        .shoe-card:hover {
+        .shoe-image:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
-        .shoe-card img {
+        .shoe-image img {
             width: 100%;
             height: auto;
             display: block;
             transition: 0.5s;
-        }
-
-        .shoe-info {
-            padding: 15px;
-            background: var(--white);
-        }
-
-        .shoe-info h3 {
-            margin: 0;
-            font-size: 1.1rem;
-            color: var(--dark-bg);
         }
 
         /* زر الواتساب العائم */
@@ -221,55 +213,22 @@ footer {
 
     <header>
         <h1>PRO CORNER <span>SHOES</span></h1>
-        <p>All Colors - Fashion Collection</p>
+        <p>Fashion Elite - White/Silver</p>
         <p>اتصل بنا: <a href="https://wa.me/201093311332" style="color: var(--main-red); text-decoration: none;">01093311332</a></p>
     </header>
 
     <div class="container">
+        <div class="shoe-image">
+            <img src="../img-fashion-elite/white-silver1.jpeg" alt="Fashion Elite White/Silver" />
+        </div>
 
-         <a href="color-fashion-elite/white.html" class="shoe-card">
-            <img src="img-fashion-elite/white1.jpeg" alt="Fashion Elite White" />
-            <div class="shoe-info">
-                <h3>Fashion Elite - White</h3>
-            </div>
-        </a>
+        <div class="shoe-image">
+            <img src="../img-fashion-elite/white-silver2.jpeg" alt="Fashion Elite White/Silver" />
+        </div>
 
-         <a href="color-fashion-elite/black.html" class="shoe-card">
-            <img src="img-fashion-elite/black1.jpeg" alt="Fashion Elite Black" />
-            <div class="shoe-info">
-                <h3>Fashion Elite - Black</h3>
-            </div>
-        </a>
-
-        <a href="color-fashion-elite/white-silver.html" class="shoe-card">
-            <img src="img-fashion-elite/white-silver1.jpeg" alt="Fashion Elite White/Silver" />
-            <div class="shoe-info">
-                <h3>Fashion Elite - White/Silver</h3>
-            </div>
-        </a>
-
-         <a href="color-fashion/white.html" class="shoe-card">
-            <img src="img-fashion/white1.jpeg" alt="Fashion White" />
-            <div class="shoe-info">
-                <h3>Fashion - White</h3>
-            </div>
-        </a> 
-
-        
-
-         <a href="color-fashion/black.html" class="shoe-card">
-            <img src="img-fashion/black1.jpeg" alt="Fashion Black" />
-            <div class="shoe-info">
-                <h3>Fashion - Black</h3>
-            </div>
-        </a>
-
-        <a href="color-fashion/white-VSJ.html" class="shoe-card">
-            <img src="img-fashion/white-VSJ1.jpeg" alt="Fashion White VSJ" />
-            <div class="shoe-info">
-                <h3>Fashion - White VSJ</h3>
-            </div>
-        </a>
+        <div class="shoe-image">
+            <img src="../img-fashion-elite/white-silver3.jpeg" alt="Fashion Elite White/Silver" />
+        </div>
 
     </div>
 
